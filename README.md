@@ -72,3 +72,5 @@ CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS     
 a2e73fec8dfe   zadanie_2   "/docker-entrypoint.…"   21 seconds ago   Up 20 seconds (healthy)   0.0.0.0:80->80/tcp, 8080/tcp   jovial_lovelace
 ```
 ### Zrzut ekranu potwierdzający wymaganą funkcjonalność.
+![image](https://github.com/user-attachments/assets/9529c7a2-fe08-4081-973a-a0ace5fed558)
+
