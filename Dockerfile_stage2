@@ -4,6 +4,10 @@ FROM node:18-alpine as build-stage
 # Ustawienie katalogu roboczego
 WORKDIR /usr/app
 
+ARG VERSION
+
+ENV APP_VERSION=${VERSION}
+
 # Kopiowanie package.json i instalacja zależności
 COPY package.json ./
 RUN npm install
