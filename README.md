@@ -1,5 +1,7 @@
 # Stage 1
 
+Początkowo cały proces budowy aplikacji i konfiguracji serwera był zawarty w jednym pliku Dockerfile. Dopiero po wykonaniu zadania podzieliłem ten plik na Dockerfile_stage1 i Dockerfile_stage2.
+
 ### Polecenia do budowania:
 ``` docker build -f Dockerfile -t zadanie_1 . ```
 ### Wynik działania polecenia build:
