@@ -1,7 +1,5 @@
 # Stage 1
 
-Początkowo cały proces budowy aplikacji i konfiguracji serwera był zawarty w jednym pliku Dockerfile. Dopiero po wykonaniu zadania podzieliłem ten plik na Dockerfile_stage1 i Dockerfile_stage2.
-
 ### Polecenia do budowania:
 ``` docker build --build-arg VERSION=1.0.1 -f Dockerfile_stage1 -t zadanie_1 . ```
 ### Wynik działania polecenia build:
@@ -33,7 +31,7 @@ CONTAINER ID   IMAGE       COMMAND       CREATED         STATUS         PORTS   
 d60ea40b9fab   zadanie_1   "npm start"   3 seconds ago   Up 2 seconds   0.0.0.0:8080->8080/tcp   epic_mclean
 ```
 ### Zrzut ekranu potwierdzający wymaganą funkcjonalność.
-
+![abc](https://github.com/user-attachments/assets/1b9c1d87-c3da-43c0-b344-e6423c652aff)
 
 # Stage 2
 
@@ -52,5 +50,5 @@ CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS     
 007f4aca1db2   zadanie_2   "/docker-entrypoint.…"   44 seconds ago   Up 44 seconds (healthy)   0.0.0.0:80->80/tcp, 8080/tcp   sleepy_mirzakhani
 ```
 ### Zrzut ekranu potwierdzający wymaganą funkcjonalność.
-
+![abc2](https://github.com/user-attachments/assets/0e2d1e88-0a7e-4d18-9730-0c31d54e9a56)
 
