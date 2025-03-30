@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
         <h1>Informacje o serwerze</h1>
         <p><strong>Adres IP:</strong> ${getServerIP()}</p>
         <p><strong>Nazwa hosta:</strong> ${os.hostname()}</p>
-        <p><strong>Wersja aplikacji:</strong> ${process.env.VERSION || 'brak wersji'}</p>
+        <p><strong>Wersja aplikacji:</strong> ${process.env.APP_VERSION || 'brak wersji'}</p>
     `);
 });
 
