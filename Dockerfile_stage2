@@ -1,15 +1,27 @@
+# syntax=docker/dockerfile:1.4
+
 # Budowa aplikacji Node.js
 FROM node:18-alpine as build-stage
+
+# Użycie BuildKit secret do klonowania repo przez SSH
+RUN apk add --no-cache openssh git
+
+# Dodanie klucza SSH jako secret
+# Klonowanie repozytorium pawcho6 przez SSH
+RUN --mount=type=secret,id=ssh_key \
+    mkdir -p ~/.ssh && \
+    chmod 700 ~/.ssh && \
+    cp /run/secrets/ssh_key ~/.ssh/id_rsa && \
+    chmod 600 ~/.ssh/id_rsa && \
+    ssh-keyscan github.com >> ~/.ssh/known_hosts && \
+    git clone git@github.com:jakubdziem/pawcho6.git /usr/app
 
 # Ustawienie katalogu roboczego
 WORKDIR /usr/app
 
-# Kopiowanie package.json i instalacja zależności
-COPY package.json ./
+# Instalacja zależności
+#maybe get rid off
 RUN npm install
-
-# Kopiowanie pliku aplikacji
-COPY ./index.js ./
 
 # Etap 2: Konfiguracja serwera Nginx + Node.js
 FROM nginx:latest
