@@ -1,4 +1,14 @@
-# Stage 1
+### Tworzenie repozytorium z użyciem folderu z poprzedniego laboratorium
+![1](https://github.com/user-attachments/assets/24dc6dc5-cc23-4105-a922-eed2160d414b)
+
+### Konfiguracja pliku config.json dla BuildKit
+![dodane buildkit do pliku config json w docker](https://github.com/user-attachments/assets/edf58587-81bc-4f5f-8d63-33249385008b)
+
+### Komenda do włączenia BuildKit w Dockerze
+``` set DOCKER_BUILDKIT=1 ```
+
+### Logowanie do GitHub Container Registry (ghcr)
+![logowanie do ghcr](https://github.com/user-attachments/assets/5bbcde5d-a681-47a4-bb62-88a1224db9a7)
 
 ### Polecenia do budowania:
 ``` docker build --secret id=ssh_key,src=id_rsa.txt -f Dockerfile_stage2 -t ghcr.io/jakubdziem/pawcho6:lab6 . ```
@@ -57,6 +67,6 @@ CONTAINER ID   IMAGE                             COMMAND                  CREATE
 91ba4729d4f9   ghcr.io/jakubdziem/pawcho6:lab6   "/docker-entrypoint.…"   16 seconds ago   Up 14 seconds (healthy)   0.0.0.0:80->80/tcp, 8080/tcp   infallible_williamson
 ```
 ### Zrzut ekranu potwierdzający wymaganą funkcjonalność.
+![działanie](https://github.com/user-attachments/assets/0f2502bc-eac4-4c5d-a936-042b2cd0e04a)
 
-
-
+### Obraz dostępny na repozytorium git jest widoczny w zakładce packages.
